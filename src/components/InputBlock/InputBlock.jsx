@@ -50,26 +50,27 @@ function InputBlock(props) {
     return (
         <div>
             <UserProvider value={name}>
-                <input type="text" placeholder='put your name' id='name_input' />
-                <select type="text" placeholder='put your gender' id='gender_input'>
-                    <option>Man</option>
-                    <option>Woman</option>
-                </select>
-                <select type="text" placeholder='put your gender' id='status_input'>
-                    <option>true</option>
-                    <option>false</option>
-                </select>
-
-                <br/>
-                <button onClick={StoreNames}>Confirm</button>
+                <div className='input-data-area'>
+                    <input type="text" placeholder='put your name' id='name_input' />
+                    <select type="text" placeholder='put your gender' id='gender_input'>
+                        <option>Man</option>
+                        <option>Woman</option>
+                    </select>
+                    <select type="text" placeholder='put your gender' id='status_input'>
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </div>
+                <br />
+                <button onClick={StoreNames}>Enter</button>
                 <button onClick={() => { alert('check console'); console.log(name) }}>Check</button>
                 <button onClick={() => alert('still working on it')}>Change State</button>
                 <button onClick={() => { sessionStorage.removeItem('hooks_name_data'); alert('All Clear Now'); let initData = [{ name: 'Tania', gender: 'Woman', id: 1, status: false }]; return setName(initData) }}>Clear All Data</button>
                 <div>
                     {name.map(item => (
                         <div>{item.name}</div>
-                            )
-                        )
+                    )
+                    )
                     }
                 </div>
                 <ShowInfo />
