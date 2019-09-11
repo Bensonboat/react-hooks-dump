@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -23,6 +25,25 @@
   color: #61dafb;
 }
 
+button {
+  /* background-color: #42b883; */
+  border-radius: 5px;
+  border: solid 1px #42b883;
+  margin: 20px 10px;
+  cursor: pointer;
+  color: rgba(0,0,0,.5);
+  box-shadow: 1px 3px 5px rgba(0,0,0,.2);
+  opacity: .5;
+  transition: .5s;
+  padding: 4px 8px
+}
+
+button:hover{  
+  color: white;
+  background-color: #42b883;
+  opacity: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +52,4 @@
     transform: rotate(360deg);
   }
 }
+
